@@ -7,7 +7,7 @@ switch (numOrStr) {
     case "":
         console.log("Empty String");
         break;
-    case isNaN(+numOrStr):
+    case isNaN(+numOrStr) && numOrStr:
         console.log("number is Ba_NaN");
         break;
     default:
