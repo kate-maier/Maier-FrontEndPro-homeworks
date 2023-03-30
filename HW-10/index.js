@@ -37,7 +37,7 @@ alert('Числа від 1 до 100, квадрат яких не перевищ
 let number = 5;
 let isPrime = true;
 for (let i = 2; i < number; i++) {
-    if (number % i === 0 || number=== 1) {
+    if (number % i === 0 || number === 1) {
         isPrime = false;
         break;
     }
