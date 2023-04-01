@@ -4,7 +4,6 @@ let numbers = '';
 for (let i = 20; i < 30; i = i + 0.5) {
     numbers += i + ' ';
 }
-
 alert('Числа від 20 до 30 з кроком 0,5:\n' + numbers);
 
 
