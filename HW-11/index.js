@@ -64,15 +64,15 @@ function checkValues(...names) {
     let isValidValue = true;
     for (let i = 0; i < names.length; i++) {
         if (names[i] === null || names[i] === '' || isNaN(+names[i])) {
-           isValidValue = false;
-           break;
+            isValidValue = false;
+            break;
         }
     }
     if (isValidValue === false) {
         alert('Ви не вказали довжину для одного або для декількох масивів')
     };
 }
-function buildArray () {
+function buildArray() {
     mainArrayLength = prompt('Введіть довжину основного масиву');
     innerArrayLength = prompt('Введіть довжину внутрішніх масивів');
     checkValues(mainArrayLength, innerArrayLength);
@@ -92,7 +92,7 @@ buildArray();
 Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом. 
 'func(" hello world", ['l', 'd'])' поверне нам "heo wor". 
 Вихідний рядок та символи для видалення задає користувач.*/
-function getValuesToArray () {
+function getValuesToArray() {
     let userArray = [];
     let arrayItem;
     while (arrayItem !== null) {
@@ -105,16 +105,17 @@ function deleteLetters() {
     let userString = prompt('Введіть рядок, в якому потрібно видалити символи');
     let userLetters = getValuesToArray();
     let newString = '';
+    let hasLetter;
     for (let i = 0; i < userString.length; i++) {
-        let hasLetter = false;
+        hasLetter = false;
         for (let j = 0; j < userLetters.length; j++) {
             if (userString[i] === userLetters[j]) {
                 hasLetter = true;
                 break;
-            } 
+            }
         }
         if (hasLetter === false) {
-        newString += userString[i];
+            newString += userString[i];
         }
     }
     console.log(newString);
