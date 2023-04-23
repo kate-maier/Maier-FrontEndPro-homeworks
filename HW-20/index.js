@@ -41,10 +41,10 @@ class Person {
     }
 }
 
-const mary = new Person('Mary', 'woman');
-const john = new Person('John', 'man');
-const alice = new Person('Alice', 'woman');
-const tom = new Person('Tom', 'man');
+const mary = new Person('Mary', 'female');
+const john = new Person('John', 'male');
+const alice = new Person('Alice', 'female');
+const tom = new Person('Tom', 'male');
 console.log(mary);
 
 // Клас Квартира
