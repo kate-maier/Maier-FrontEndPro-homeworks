@@ -119,7 +119,7 @@ class Hamburger {
 }
 
 // маленький гамбургер з начинкою з сиру
-var hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
+const hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
 
 // добавка з майонезу
 hamburger.addTopping(Hamburger.TOPPING_MAYO);
