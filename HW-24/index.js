@@ -7,7 +7,6 @@
 салатом (+ 20 тугриків, + 5 калорій);
 картоплею (+ 15 тугриків, + 10 калорій).
 
-
 Можна додати добавки:
 посипати приправою (+15 тугриків, 0 калорій) - полити майонезом (+ 20 тугриків, +5 калорій).
 Напишіть програму, яка розраховує вартість та калорійність гамбургера. Використовуйте ООП підхід.
@@ -16,19 +15,14 @@
 Приклад роботи коду:
 // маленький гамбургер з начинкою з сиру
 var hamburger = new Hamburger(Hamburger .SIZE_SMALL, Hamburger.STUFFING_CHEESE);
-
 // добавка з майонезу
 hamburger.addTopping(Hamburger.TOPPING_MAYO);
-
 // запитаємо скільки там калорій
 console.log(“Calories: “ + hamburger.calculate ());
-
 // скільки коштує
 console.log("Price: “ + hamburger.calculatePrice());
-
 // я тут передумав і вирішив додати ще приправу
 hamburger.addTopping(Hamburger .TOPPING_SAUCE);
-
 // А скільки тепер коштує?
 console.log("Price with sauce: “ + hamburger.calculatePrice()); */
 
@@ -84,7 +78,6 @@ class Hamburger {
         this.stuffing = stuffing;
     }
 
-
     addTopping(topping) {
         if (topping === Hamburger.TOPPING_MAYO) {
             this.toppingMayo = Hamburger.TOPPING_MAYO;
@@ -95,25 +88,29 @@ class Hamburger {
 
     calcCalories() {
         this.calories = this.size.calories + this.stuffing.calories;
+
         if (this.toppingMayo) {
             this.calories += this.toppingMayo.calories;
         };
 
         if (this.toppingSauce) {
             this.calories += this.toppingSauce.calories;
-        }
+        };
+
         return this.calories;
     }
 
     calcPrice() {
         this.money = this.size.money + this.stuffing.money;
+
         if (this.toppingMayo) {
             this.money += this.toppingMayo.money;
         };
 
         if (this.toppingSauce) {
             this.money += this.toppingSauce.money;
-        }
+        };
+
         return this.money;
     }
 }
