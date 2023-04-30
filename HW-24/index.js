@@ -29,8 +29,6 @@ console.log("Price with sauce: “ + hamburger.calculatePrice()); */
 class Hamburger {
     money;
     calories;
-    toppingMayo;
-    toppingSauce;
 
     static SIZE_SMALL = {
         size: "маленький",
