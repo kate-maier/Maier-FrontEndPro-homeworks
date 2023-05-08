@@ -13,8 +13,6 @@ p = new SuperMath();
 p.check(obj); // --> no p.input() -> 3 prompt -> рахує */
 
 class SuperMath {
-    static obj = { x: 12, y: 3, znak: '/' };
-
     result;
     x;
     y;
@@ -51,18 +49,21 @@ class SuperMath {
         } else { this.input() }
     };
 
-    input() {
-        this.znak = prompt('Введіть знак операціїї: можливі варіанти znak +, -, /, *, %');
-
-        while (this.znak !== '+'
-            && this.znak !== '-'
-            && this.znak !== '/'
-            && this.znak !== '*'
-            && this.znak !== '%') {
+    checkValue(value) {
+        value = prompt('Введіть знак операціїї: можливі варіанти znak +, -, /, *, %');
+        while (value !== '+'
+            && value !== '-'
+            && value !== '/'
+            && value !== '*'
+            && value !== '%') {
             alert('Ви ввели не коректне значення');
-            this.znak = prompt('Введіть знак операціїї: можливі варіанти znak +, -, /, *, %');
+            value = prompt('Введіть знак операціїї: можливі варіанти znak +, -, /, *, %');
         };
+        return value;
+    };
 
+    input() {
+        this.znak = this.checkValue(this.znak);
         this.x = +prompt('Введіть першу цифру для розрахунку операції');
         this.y = +prompt('Введіть другу цифру для розрахунку операції');
 
@@ -73,5 +74,6 @@ class SuperMath {
 }
 
 const p = new SuperMath();
+SuperMath.obj = { x: 12, y: 3, znak: '/' };
 let obj = SuperMath.obj;
 p.check(obj);
