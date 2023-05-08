@@ -50,7 +50,6 @@ class SuperMath {
     };
 
     checkValue(value) {
-        value = prompt('Введіть знак операціїї: можливі варіанти znak +, -, /, *, %');
         while (value !== '+'
             && value !== '-'
             && value !== '/'
@@ -63,6 +62,7 @@ class SuperMath {
     };
 
     input() {
+        this.znak = prompt('Введіть знак операціїї: можливі варіанти znak +, -, /, *, %');
         this.znak = this.checkValue(this.znak);
         this.x = +prompt('Введіть першу цифру для розрахунку операції');
         this.y = +prompt('Введіть другу цифру для розрахунку операції');
