@@ -13,6 +13,8 @@ p = new SuperMath();
 p.check(obj); // --> no p.input() -> 3 prompt -> рахує */
 
 class SuperMath {
+    static obj = { x: 12, y: 3, znak: '/' };
+    
     result;
     x;
     y;
@@ -75,6 +77,5 @@ class SuperMath {
 }
 
 const p = new SuperMath();
-SuperMath.obj = { x: 12, y: 3, znak: '/' };
 let obj = SuperMath.obj;
 p.check(obj);
