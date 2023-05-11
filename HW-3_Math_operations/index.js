@@ -1,3 +1,13 @@
+// Створити скрипт для додавання, віднімання, множення та поділу двох чисел та виведення результатів.
+// Користувач вводить два числа через два промпти, і повідомлення виводиться алертом з таким результатом:
+// //Користувач ввів 2 і 2:
+
+// 2+2=4
+// 2-2=0
+// 2*2=4
+// 2/2=1
+
+
 let firstNumberString = prompt("Please, enter the first number");
 let secondNumberString = prompt("Please, enter the second number");
 let firstNumber = Number(firstNumberString);
