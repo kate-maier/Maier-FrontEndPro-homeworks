@@ -3,6 +3,7 @@
 //При пропажі фокусу - <div> так само пропадає
 
 const textField = document.getElementById('textField');
+
 textField.addEventListener('focus', () => {
     const newDiv = document.createElement('div');
     newDiv.textContent = 'New block!';
